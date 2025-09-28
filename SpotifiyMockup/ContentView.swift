@@ -79,10 +79,12 @@ struct titleView: View {
                     Text("0:00")
                         .opacity(0.6)
                         .foregroundColor(.white)
+                        .fontWeight(.bold)
                     Spacer()
                     Text("-2:53")
                         .opacity(0.6)
                         .foregroundColor(.white)
+                        .fontWeight(.bold)
                 }
                 .padding([.trailing, .leading], 10)
             }
@@ -91,7 +93,23 @@ struct titleView: View {
     
     struct playbackView: View {
         var body: some View {
-
+            HStack{
+                Image(systemName: "shuffle")
+                    .foregroundColor(.white)
+                    .padding([.trailing], 50)
+                Image(systemName: "backward.fill" )
+                    .foregroundColor(.white)
+                    .padding([.trailing], 60)
+                Image(systemName: "play.fill" )
+                    .foregroundColor(.white)
+                    .padding([.trailing], 60)
+                Image(systemName: "forward.fill" )
+                    .foregroundColor(.white)
+                    .padding([.trailing], 50)
+                Image(systemName: "repeat" )
+                    .foregroundColor(.white)
+            }
+            .padding(.vertical, 40)
         }
     }
     
@@ -100,6 +118,7 @@ struct titleView: View {
             Image("Espresso")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .cornerRadius(10)
                 .padding(10)
         }
     }
