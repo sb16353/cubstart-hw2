@@ -46,61 +46,70 @@ struct BlurView: UIViewRepresentable {
 
 struct titleView: View {
     var body: some View {
-        Text("Implement Me")
-    }
-}
-
-struct timeView: View {
-    var body: some View {
-        VStack {
-            ZStack {
-                Circle()
-                    .frame(height:10)
-                    .foregroundColor(.white)
-                    .padding([.trailing], 370)
-                Rectangle()
-                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
-                    .frame(height: 5)
-                    .padding([.leading, .trailing], 10)
-                    .foregroundColor(.white)
-                    .opacity(0.3)
-            }
-            
-            HStack {
-                Text("0:00")
-                    .opacity(0.6)
-                    .foregroundColor(.white)
-                Spacer()
-                Text("-2:53")
-                    .opacity(0.6)
-                    .foregroundColor(.white)
-            }
-            .padding([.trailing, .leading], 10)
+        VStack{
+            Text("Espresso")
+                .font(.system(size: 22, weight: .bold))
+                .padding([.trailing], 293)
+                .foregroundColor(.white)
+            Text("Sabrina Carpenter")
+                .font(.system(size: 14, weight: .bold))
+                .padding([.trailing], 260)
+                .foregroundColor(.white)
         }
     }
 }
-
-struct playbackView: View {
-    var body: some View {
-        Text("Implement Me")
+    
+    struct timeView: View {
+        var body: some View {
+            VStack {
+                ZStack {
+                    Circle()
+                        .frame(height:10)
+                        .foregroundColor(.white)
+                        .padding([.trailing], 370)
+                    Rectangle()
+                        .cornerRadius(3.0)
+                        .frame(height: 5)
+                        .padding([.leading, .trailing], 10)
+                        .foregroundColor(.white)
+                        .opacity(0.3)
+                }
+                
+                HStack {
+                    Text("0:00")
+                        .opacity(0.6)
+                        .foregroundColor(.white)
+                    Spacer()
+                    Text("-2:53")
+                        .opacity(0.6)
+                        .foregroundColor(.white)
+                }
+                .padding([.trailing, .leading], 10)
+            }
+        }
     }
-}
-
-struct albumView : View {
-    var body: some View {
-        Image("Image")
+    
+    struct playbackView: View {
+        var body: some View {
+            Text("Implement Me")
+        }
+    }
+    
+    struct albumView : View {
+        var body: some View {
+            Image("Image")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(10)
+        }
     }
-}
-
-struct extraView : View {
-    var body: some View {
-        Text("Implement Me")
+    
+    struct extraView : View {
+        var body: some View {
+            Text("Implement Me")
+        }
     }
-}
-
-#Preview {
-    ContentView()
-}
+    
+    #Preview {
+        ContentView()
+    }
