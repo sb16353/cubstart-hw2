@@ -91,13 +91,13 @@ struct titleView: View {
     
     struct playbackView: View {
         var body: some View {
-            Text("Implement Me")
+
         }
     }
     
     struct albumView : View {
         var body: some View {
-            Image("Image")
+            Image("Espresso")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(10)
